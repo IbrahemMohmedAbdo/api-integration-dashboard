@@ -1,0 +1,26 @@
+@keyframes rain {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 20% 100%; }
+}
+
+@keyframes snow {
+    0% { transform: translateY(-10%) rotate(0deg); }
+    100% { transform: translateY(10%) rotate(360deg); }
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.animate-rain {
+    animation: rain 2s linear infinite;
+}
+
+.animate-snow {
+    animation: snow 3s ease-in-out infinite alternate;
+}
+
+.animate-flash {
+    animation: flash 3s ease-in-out infinite;
+}

@@ -1,0 +1,39 @@
+@keyframes float-clouds {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+}
+
+@keyframes rain-drop {
+    0% { transform: translateY(-10px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(20px); opacity: 0; }
+}
+
+@keyframes snow-fall {
+    0% { transform: translateY(-10px) rotate(0deg); }
+    100% { transform: translateY(20px) rotate(360deg); }
+}
+
+@keyframes lightning {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.weather-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.clouds { animation: float-clouds 8s ease-in-out infinite alternate; }
+.rain { animation: rain-drop 1s linear infinite; }
+.snow { animation: snow-fall 3s linear infinite; }
+.thunder { animation: lightning 2s ease-in-out infinite; }
