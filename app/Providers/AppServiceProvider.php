@@ -20,5 +20,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        if (!app()->runningInConsole() && request()->is('/') && !request()->is('welcome')) {
+            redirect('/admin')->send();
+        }
     }
 }
